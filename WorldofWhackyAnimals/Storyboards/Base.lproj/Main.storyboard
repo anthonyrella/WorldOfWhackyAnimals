@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="OxW-bk-yYy">
+            <objects>
+                <viewController id="aBI-yD-r2R" customClass="GameViewController" customModule="WorldofWhackyAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vdv-W2-QjG">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="085-Sx-MiV" customClass="SKView">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vDi-fH-2GG"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="085-Sx-MiV" id="IUV-ez-bMB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yeg-j2-ic8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-779.46026986506752" y="28"/>
+        </scene>
+        <!--Games Statistics View Controller-->
+        <scene sceneID="Qf1-ZV-EbT">
+            <objects>
+                <viewController id="JFb-i5-wPS" customClass="GamesStatisticsViewController" customModule="WorldofWhackyAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l79-Vg-j6L">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z83-tx-kwl">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Game Statistics Popover" id="45z-oi-1NF"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="at7-Ll-8ha"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Vi-5j-Y9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-781" y="887"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WorldofWhackyAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecl-yw-i2B">
+                                <rect key="frame" x="458" y="276" width="154" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Continent Selection"/>
+                                <connections>
+                                    <segue destination="c4o-Bd-PcH" kind="presentation" id="53p-Tk-Zrc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGY-oQ-WMC">
+                                <rect key="frame" x="256" y="276" width="154" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Player Statistics"/>
+                                <connections>
+                                    <segue destination="CRp-f4-rcu" kind="presentation" id="fJg-ph-hxZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ag0-AW-f8V">
+                                <rect key="frame" x="458" y="141" width="154" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="Q7u-fE-MXe" kind="presentation" id="IB6-xF-LoL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSz-A3-zuM">
+                                <rect key="frame" x="458" y="20" width="154" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Change Player"/>
+                                <connections>
+                                    <segue destination="191-hj-qx2" kind="presentation" id="E2a-bx-9ZW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIa-Mf-qSO">
+                                <rect key="frame" x="44" y="276" width="154" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Stores Near Me"/>
+                                <connections>
+                                    <segue destination="aeR-pB-Ovh" kind="presentation" id="fTq-pS-NAp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ak-vn-pLb">
+                                <rect key="frame" x="44" y="20" width="222" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Play Game"/>
+                                <connections>
+                                    <segue destination="aBI-yD-r2R" kind="presentation" id="yWE-Jt-Roq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.523238380809602" y="28"/>
+        </scene>
+        <!--Change Player View Controller-->
+        <scene sceneID="JBn-v6-3Fy">
+            <objects>
+                <viewController id="191-hj-qx2" customClass="ChangePlayerViewController" customModule="WorldofWhackyAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jMN-YG-6NX">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L3q-2L-3Ob">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Change Player" id="sQ6-Em-Omm">
+                                        <barButtonItem key="leftBarButtonItem" title="Home" id="sl1-H9-24c">
+                                            <connections>
+                                                <segue destination="GGv-Ww-78a" kind="unwind" unwindAction="unwindToHomeViewControllerWithSegue:" id="i8c-wj-yRJ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eEb-VN-qnu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Hb-p6-tou" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="GGv-Ww-78a" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="893" y="-1541"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="hbc-mS-1pg">
+            <objects>
+                <viewController id="Q7u-fE-MXe" customClass="SettingsViewController" customModule="WorldofWhackyAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="169-tl-pFv">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5gP-Ip-KUg">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Setings" id="rMP-MP-Xea">
+                                        <barButtonItem key="leftBarButtonItem" title="Home" id="qgL-2c-M20">
+                                            <connections>
+                                                <segue destination="Gcu-yZ-ZOh" kind="unwind" unwindAction="unwindToHomeViewControllerWithSegue:" id="C9K-vF-yKa"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tRf-xj-ECn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z3O-z9-YYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Gcu-yZ-ZOh" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="895" y="-785"/>
+        </scene>
+        <!--Continent Selection View Controller-->
+        <scene sceneID="jEO-NN-K1w">
+            <objects>
+                <viewController id="c4o-Bd-PcH" customClass="ContinentSelectionViewController" customModule="WorldofWhackyAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7sq-l5-lXC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ga6-C0-bzd">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Continent Selection" id="3ty-Of-a1C">
+                                        <barButtonItem key="leftBarButtonItem" title="Home" id="a7L-pP-F4J">
+                                            <connections>
+                                                <segue destination="bts-7R-zrN" kind="unwind" unwindAction="unwindToHomeViewControllerWithSegue:" id="ln9-le-q7C"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="exj-a9-gg7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SkC-Nz-xtv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bts-7R-zrN" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="896" y="28"/>
+        </scene>
+        <!--Player Stats View Controller-->
+        <scene sceneID="zFF-F3-a2H">
+            <objects>
+                <viewController id="CRp-f4-rcu" customClass="PlayerStatsViewController" customModule="WorldofWhackyAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cvO-Vl-FmT">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NfJ-P8-p8S">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Player Statistics" id="Pyc-1V-yB5">
+                                        <barButtonItem key="leftBarButtonItem" title="Home" id="RFB-aA-nEm">
+                                            <connections>
+                                                <segue destination="Ttj-2M-s98" kind="unwind" unwindAction="unwindToHomeViewControllerWithSegue:" id="vVW-iJ-mX5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="MKr-ew-yvJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dwh-aV-bRU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ttj-2M-s98" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="896" y="858"/>
+        </scene>
+        <!--Stores Near Me View Controller-->
+        <scene sceneID="Hr3-YM-91O">
+            <objects>
+                <viewController id="aeR-pB-Ovh" customClass="StoresNearMeViewController" customModule="WorldofWhackyAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cZU-V6-d2U">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YTO-xN-xJe">
+                                <rect key="frame" x="0.0" y="1" width="667" height="32"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Stores Near Me" id="DEX-2F-G57">
+                                        <barButtonItem key="leftBarButtonItem" title="Home" id="0PI-U2-vD2">
+                                            <connections>
+                                                <segue destination="zCV-ZH-9dc" kind="unwind" unwindAction="unwindToHomeViewControllerWithSegue:" id="lzA-Dh-dzw"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03v-4n-AsP">
+                                <rect key="frame" x="467" y="269" width="154" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Directions"/>
+                                <connections>
+                                    <segue destination="2pU-JS-XDL" kind="presentation" id="RwY-Eo-Lje"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="G64-Lm-3yY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2f0-QI-ld4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="zCV-ZH-9dc" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="896" y="1612"/>
+        </scene>
+        <!--Directions View Controller-->
+        <scene sceneID="OgL-hB-v7d">
+            <objects>
+                <viewController id="2pU-JS-XDL" customClass="DirectionsViewController" customModule="WorldofWhackyAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NII-Z6-Hol">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xwF-5V-cUd">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Directions" id="GVL-QK-o4S">
+                                        <barButtonItem key="leftBarButtonItem" title="Home" id="uKn-fN-nRc">
+                                            <connections>
+                                                <segue destination="lI6-Rn-xzS" kind="unwind" unwindAction="unwindToHomeViewControllerWithSegue:" id="nkP-JF-mlq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9OC-vw-tIf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V4d-kl-rmM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="lI6-Rn-xzS" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1604" y="1625"/>
+        </scene>
+    </scenes>
+</document>
