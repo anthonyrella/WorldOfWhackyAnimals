@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        print("Current user is: \(appDelegate.currentUser)")
     }
 
     @IBAction func unwindToHomeViewController(segue: UIStoryboardSegue)

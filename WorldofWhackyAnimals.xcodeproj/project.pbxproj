@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		358B668B21A4946300977EAC /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B668A21A4946300977EAC /* UserTableViewCell.swift */; };
+		358B668F21A497AC00977EAC /* GetUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B668E21A497AC00977EAC /* GetUserData.swift */; };
+		358B669321A4CE6700977EAC /* InsertNewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B669221A4CE6700977EAC /* InsertNewUser.swift */; };
+		358B66F921A8959A00977EAC /* howtoplay.png in Resources */ = {isa = PBXBuildFile; fileRef = 358B66F821A8959A00977EAC /* howtoplay.png */; };
+		358B66FB21A896EB00977EAC /* sound.png in Resources */ = {isa = PBXBuildFile; fileRef = 358B66FA21A896EB00977EAC /* sound.png */; };
+		358B66FF21A89DFC00977EAC /* step1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 358B66FE21A89DFC00977EAC /* step1.jpeg */; };
+		358B670321A8A87800977EAC /* step2.png in Resources */ = {isa = PBXBuildFile; fileRef = 358B670221A8A87700977EAC /* step2.png */; };
+		358B670521A8DDEC00977EAC /* players.png in Resources */ = {isa = PBXBuildFile; fileRef = 358B670421A8DDEC00977EAC /* players.png */; };
 		92E703F521A0D4B1003DEE1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E703F421A0D4B1003DEE1F /* AppDelegate.swift */; };
 		92E703F721A0D4B1003DEE1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E703F621A0D4B1003DEE1F /* ViewController.swift */; };
 		92E703FA21A0D4B1003DEE1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E703F821A0D4B1003DEE1F /* Main.storyboard */; };
@@ -26,7 +34,30 @@
 		92E7042821A1DEC8003DEE1F /* Action.sks in Resources */ = {isa = PBXBuildFile; fileRef = 92E7042721A1DEC8003DEE1F /* Action.sks */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		358B66C921A73AFB00977EAC /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		358B668A21A4946300977EAC /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		358B668E21A497AC00977EAC /* GetUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserData.swift; sourceTree = "<group>"; };
+		358B669221A4CE6700977EAC /* InsertNewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertNewUser.swift; sourceTree = "<group>"; };
+		358B66F321A73DF400977EAC /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		358B66F421A73DF400977EAC /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
+		358B66F821A8959A00977EAC /* howtoplay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = howtoplay.png; sourceTree = "<group>"; };
+		358B66FA21A896EB00977EAC /* sound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound.png; sourceTree = "<group>"; };
+		358B66FE21A89DFC00977EAC /* step1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = step1.jpeg; sourceTree = "<group>"; };
+		358B670221A8A87700977EAC /* step2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step2.png; sourceTree = "<group>"; };
+		358B670421A8DDEC00977EAC /* players.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = players.png; sourceTree = "<group>"; };
 		92E703F121A0D4B1003DEE1F /* WorldofWhackyAnimals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldofWhackyAnimals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E703F421A0D4B1003DEE1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92E703F621A0D4B1003DEE1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +91,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		358B66F721A891C200977EAC /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				358B670421A8DDEC00977EAC /* players.png */,
+				358B670221A8A87700977EAC /* step2.png */,
+				358B66FE21A89DFC00977EAC /* step1.jpeg */,
+				358B66FA21A896EB00977EAC /* sound.png */,
+				358B66F821A8959A00977EAC /* howtoplay.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		92E703E821A0D4B1003DEE1F = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +123,7 @@
 		92E703F321A0D4B1003DEE1F /* WorldofWhackyAnimals */ = {
 			isa = PBXGroup;
 			children = (
+				358B66F721A891C200977EAC /* Images */,
 				92E7042021A1DB62003DEE1F /* Scenes */,
 				92E7040821A1C5B1003DEE1F /* View Controllers */,
 				92E7040721A1C5A2003DEE1F /* Special Classes */,
@@ -102,7 +146,10 @@
 		92E7040721A1C5A2003DEE1F /* Special Classes */ = {
 			isa = PBXGroup;
 			children = (
+				358B668E21A497AC00977EAC /* GetUserData.swift */,
+				358B668A21A4946300977EAC /* UserTableViewCell.swift */,
 				92E703F421A0D4B1003DEE1F /* AppDelegate.swift */,
+				358B669221A4CE6700977EAC /* InsertNewUser.swift */,
 			);
 			path = "Special Classes";
 			sourceTree = "<group>";
@@ -126,6 +173,8 @@
 		92E7041B21A1D794003DEE1F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				358B66F321A73DF400977EAC /* WatchConnectivity.framework */,
+				358B66F421A73DF400977EAC /* WatchKit.framework */,
 				92E7041C21A1D794003DEE1F /* SpriteKit.framework */,
 			);
 			name = Frameworks;
@@ -151,6 +200,7 @@
 				92E703ED21A0D4B1003DEE1F /* Sources */,
 				92E703EE21A0D4B1003DEE1F /* Frameworks */,
 				92E703EF21A0D4B1003DEE1F /* Resources */,
+				358B66C921A73AFB00977EAC /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
@@ -200,8 +250,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				92E7042621A1DEB4003DEE1F /* GameScene.sks in Resources */,
+				358B670321A8A87800977EAC /* step2.png in Resources */,
+				358B670521A8DDEC00977EAC /* players.png in Resources */,
+				358B66F921A8959A00977EAC /* howtoplay.png in Resources */,
 				92E703FF21A0D4B4003DEE1F /* LaunchScreen.storyboard in Resources */,
+				358B66FF21A89DFC00977EAC /* step1.jpeg in Resources */,
 				92E703FC21A0D4B4003DEE1F /* Assets.xcassets in Resources */,
+				358B66FB21A896EB00977EAC /* sound.png in Resources */,
 				92E703FA21A0D4B1003DEE1F /* Main.storyboard in Resources */,
 				92E7042821A1DEC8003DEE1F /* Action.sks in Resources */,
 			);
@@ -222,8 +277,11 @@
 				92E7042221A1DC47003DEE1F /* GameScene.swift in Sources */,
 				92E703F521A0D4B1003DEE1F /* AppDelegate.swift in Sources */,
 				92E7041621A1CDFA003DEE1F /* ChangePlayerViewController.swift in Sources */,
+				358B668B21A4946300977EAC /* UserTableViewCell.swift in Sources */,
 				92E7041821A1D27B003DEE1F /* DirectionsViewController.swift in Sources */,
 				92E7040C21A1CD5B003DEE1F /* SettingsViewController.swift in Sources */,
+				358B668F21A497AC00977EAC /* GetUserData.swift in Sources */,
+				358B669321A4CE6700977EAC /* InsertNewUser.swift in Sources */,
 				92E7041A21A1D293003DEE1F /* StoresNearMeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
