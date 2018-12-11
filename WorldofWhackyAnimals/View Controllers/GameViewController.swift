@@ -2,39 +2,36 @@
 //  GameViewController.swift
 //  WorldofWhackyAnimals
 //
-//  Created by Anthony Rella on 2018-11-18.
-//  Copyright © 2018 AnthonyRella. All rights reserved.
+//  Created by DeJoun Robinson on 2018-12-11.
+//  Copyright © 2018 DeJoun Robinson. All rights reserved.
 //
+//  Description: Connect and present the game scene with the view
 
 import UIKit
 import SpriteKit
-
+import GameplayKit
 
 class GameViewController: UIViewController {
-
-    @IBOutlet weak var sceneView: SKView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let scene = SKScene(fileNamed: "GameScene") as? GameScene {
-            scene.scaleMode = .aspectFill
-            sceneView.presentScene(scene)
+        if let view = self.view as! SKView? {
+            if let scene = SKScene(fileNamed: "GameScene") {
+                scene.scaleMode = .fill
+                
+                view.presentScene(scene)
+            }
+            
+            view.ignoresSiblingOrder = true
+            
+            view.showsFPS = true
+            view.showsNodeCount = true
         }
-        
-        
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Release any cached data, images, etc that aren't in use.
     }
-    */
-
 }
