@@ -1,0 +1,4 @@
+All classes that exist in this folder are for the sole purpose of advanced functionality in swift.
+
+GIFSupport.swift belongs Arne Bahlo and was used to allow animated gifs within a UIImageView. The code has only been modified to improve the animation speed of gifs which has been commented at line 115. This code is publicly available at the github repo below:
+https://github.com/swiftgif/SwiftGif
