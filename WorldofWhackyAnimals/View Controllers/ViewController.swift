@@ -7,8 +7,27 @@
 //
 
 import UIKit
+import WatchConnectivity
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, WCSessionDelegate {
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+    }
+    
+//    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+//        var replyValues = Dictionary<String, AnyObject>()        
+//        replyValues["status"] = "Program Received" as AnyObject?
+//        replyHandler(replyValues)
+//    }
 
     @IBOutlet weak var userPickerView: UIPickerView!
     @IBOutlet weak var button: UIButton!
@@ -16,20 +35,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var pickerData: [String] = [String]()
     
     func animateButton(sender: UIButton) {
-        
-//        sender.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
-//
-//        UIView.animate(withDuration: 1.0,
-//                       delay: 0,
-//                       usingSpringWithDamping: CGFloat(0.20),
-//                       initialSpringVelocity: CGFloat(6.0),
-//                       options: [UIViewAnimationOptions.allowUserInteraction, .repeat],
-//                       animations: {
-//                        sender.transform = CGAffineTransform.identity
-//        },
-//                       completion: { Void in()  }
-//        )
-        
         let pulse = CASpringAnimation(keyPath: "transform.scale")
         pulse.duration = 0.6
         pulse.fromValue = 0.90
@@ -39,7 +44,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         pulse.initialVelocity = 0.5
         pulse.damping = 1.0
         
+        sendWatchMessage()
+        
         sender.layer.add(pulse, forKey: "pulse")
+    
     }
     
     @IBAction func close(_sender : AnyObject)
@@ -59,6 +67,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return pickerData[row]
     }
     
+    func sendWatchMessage()
+    {
+        print("in send message")
+        if WCSession.default.isReachable{
+            print("is reachable")
+            let message = ["message" : "hello"]
+            WCSession.default.sendMessage(message, replyHandler: nil, errorHandler: nil)
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         animateButton(sender: button)
     }
@@ -68,6 +86,27 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // Do any additional setup after loading the view, typically from a nib.
         
         pickerData = ["User 1", "User 2", "User 3", "User 4", "User 5", "User 6"]
+        
+        if WCSession.isSupported(){
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+            
+            if session.isPaired != true
+            {
+                print("Apple Watch not paired")
+            }
+            if session.isWatchAppInstalled != true
+                
+            {
+                print("WatchKit app not installed")
+            }
+            
+        }
+        else{
+            print("watch connectivity is not supported on this device")
+        }
+        
     }
 
     @IBAction func unwindToHomeViewController(segue: UIStoryboardSegue)
