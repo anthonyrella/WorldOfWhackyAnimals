@@ -24,6 +24,8 @@
 		92E7042221A1DC47003DEE1F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E7042121A1DC47003DEE1F /* GameScene.swift */; };
 		92E7042621A1DEB4003DEE1F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 92E7042521A1DEB4003DEE1F /* GameScene.sks */; };
 		92E7042821A1DEC8003DEE1F /* Action.sks in Resources */ = {isa = PBXBuildFile; fileRef = 92E7042721A1DEC8003DEE1F /* Action.sks */; };
+		92E7042B21A21336003DEE1F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E7042A21A21336003DEE1F /* CoreLocation.framework */; };
+		92E7042D21A2133E003DEE1F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E7042C21A2133E003DEE1F /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		92E7042121A1DC47003DEE1F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		92E7042521A1DEB4003DEE1F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		92E7042721A1DEC8003DEE1F /* Action.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Action.sks; sourceTree = "<group>"; };
+		92E7042A21A21336003DEE1F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		92E7042C21A2133E003DEE1F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92E7042D21A2133E003DEE1F /* MapKit.framework in Frameworks */,
+				92E7042B21A21336003DEE1F /* CoreLocation.framework in Frameworks */,
 				92E7041D21A1D794003DEE1F /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +132,8 @@
 		92E7041B21A1D794003DEE1F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				92E7042C21A2133E003DEE1F /* MapKit.framework */,
+				92E7042A21A21336003DEE1F /* CoreLocation.framework */,
 				92E7041C21A1D794003DEE1F /* SpriteKit.framework */,
 			);
 			name = Frameworks;
@@ -378,7 +386,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = RADS.WorldofWhackyAnimals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -395,7 +403,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = RADS.WorldofWhackyAnimals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
