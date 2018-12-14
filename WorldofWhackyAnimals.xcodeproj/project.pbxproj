@@ -11,6 +11,8 @@
 		9284BCC421C36A3700CAE1B5 /* GetUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284BCC321C36A3700CAE1B5 /* GetUserData.swift */; };
 		9284BCC721C36A5D00CAE1B5 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284BCC521C36A5D00CAE1B5 /* UserTableViewCell.swift */; };
 		9284BCC821C36A5D00CAE1B5 /* InsertNewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284BCC621C36A5D00CAE1B5 /* InsertNewUser.swift */; };
+		9284BCF721C3EFFE00CAE1B5 /* WhackSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284BCF621C3EFFE00CAE1B5 /* WhackSlot.swift */; };
+		9284BCFA21C3F03F00CAE1B5 /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9284BCF921C3F03F00CAE1B5 /* whack.caf */; };
 		92E703F521A0D4B1003DEE1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E703F421A0D4B1003DEE1F /* AppDelegate.swift */; };
 		92E703F721A0D4B1003DEE1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E703F621A0D4B1003DEE1F /* ViewController.swift */; };
 		92E703FA21A0D4B1003DEE1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E703F821A0D4B1003DEE1F /* Main.storyboard */; };
@@ -89,6 +91,8 @@
 		9284BCC321C36A3700CAE1B5 /* GetUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserData.swift; sourceTree = "<group>"; };
 		9284BCC521C36A5D00CAE1B5 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		9284BCC621C36A5D00CAE1B5 /* InsertNewUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertNewUser.swift; sourceTree = "<group>"; };
+		9284BCF621C3EFFE00CAE1B5 /* WhackSlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhackSlot.swift; sourceTree = "<group>"; };
+		9284BCF921C3F03F00CAE1B5 /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whack.caf; sourceTree = "<group>"; };
 		92E703F121A0D4B1003DEE1F /* WorldofWhackyAnimals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldofWhackyAnimals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E703F421A0D4B1003DEE1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92E703F621A0D4B1003DEE1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +150,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9284BCF821C3F02000CAE1B5 /* Sound FX */ = {
+			isa = PBXGroup;
+			children = (
+				9284BCF921C3F03F00CAE1B5 /* whack.caf */,
+			);
+			path = "Sound FX";
+			sourceTree = "<group>";
+		};
 		92E703E821A0D4B1003DEE1F = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +182,7 @@
 		92E703F321A0D4B1003DEE1F /* WorldofWhackyAnimals */ = {
 			isa = PBXGroup;
 			children = (
+				9284BCF821C3F02000CAE1B5 /* Sound FX */,
 				92E7042021A1DB62003DEE1F /* Scenes */,
 				92E7040821A1C5B1003DEE1F /* View Controllers */,
 				92E7040721A1C5A2003DEE1F /* Special Classes */,
@@ -232,6 +245,7 @@
 		92E7042021A1DB62003DEE1F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9284BCF621C3EFFE00CAE1B5 /* WhackSlot.swift */,
 				92E7042121A1DC47003DEE1F /* GameScene.swift */,
 				92E7042521A1DEB4003DEE1F /* GameScene.sks */,
 				92E7042721A1DEC8003DEE1F /* Action.sks */,
@@ -369,6 +383,7 @@
 				92E703FC21A0D4B4003DEE1F /* Assets.xcassets in Resources */,
 				92E703FA21A0D4B1003DEE1F /* Main.storyboard in Resources */,
 				92E7042821A1DEC8003DEE1F /* Action.sks in Resources */,
+				9284BCFA21C3F03F00CAE1B5 /* whack.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9284BCF721C3EFFE00CAE1B5 /* WhackSlot.swift in Sources */,
 				92E7053621C2F430003DEE1F /* TopTenPlayerStatTableViewCell.swift in Sources */,
 				92E7053821C2F4B5003DEE1F /* getData.swift in Sources */,
 				92E7041F21A1D985003DEE1F /* GameViewController.swift in Sources */,

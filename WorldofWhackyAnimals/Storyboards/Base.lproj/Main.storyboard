@@ -14,21 +14,12 @@
         <scene sceneID="OxW-bk-yYy">
             <objects>
                 <viewController id="aBI-yD-r2R" customClass="GameViewController" customModule="WorldofWhackyAnimals" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vdv-W2-QjG">
+                    <view key="view" contentMode="scaleToFill" id="vdv-W2-QjG" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="085-Sx-MiV" customClass="SKView">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vDi-fH-2GG"/>
                     </view>
-                    <connections>
-                        <outlet property="sceneView" destination="085-Sx-MiV" id="IUV-ez-bMB"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yeg-j2-ic8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -617,6 +608,9 @@
                                         <integer key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="aBI-yD-r2R" kind="presentation" id="t7T-KR-FkT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaP-v4-rnm">
                                 <rect key="frame" x="222" y="171" width="222" height="31"/>
