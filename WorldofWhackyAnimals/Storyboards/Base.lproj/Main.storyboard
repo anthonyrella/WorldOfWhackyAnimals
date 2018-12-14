@@ -20,8 +20,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vDi-fH-2GG"/>
                     </view>
+                    <connections>
+                        <segue destination="Fce-8d-pTF" kind="unwind" identifier="toHome" unwindAction="unwindToWelcomeViewControllerWithSegue:" id="btD-hQ-UvW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yeg-j2-ic8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Fce-8d-pTF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-779.46026986506752" y="28"/>
         </scene>

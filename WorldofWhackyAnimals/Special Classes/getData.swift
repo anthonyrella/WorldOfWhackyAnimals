@@ -175,6 +175,34 @@ class GetData: NSObject {
             }
             }.resume()
     }
+    
+    func postData(level:Int, user:String, win:Int, loss:Int)  {
+        
+        let request = NSMutableURLRequest(url: NSURL(string: "https://patel539.dev.fast.sheridanc.on.ca/prog39856/ios_project/insertGame.php")! as URL)
+        
+        request.httpMethod = "POST"
+        
+       
+        
+        let postString = "lvl=\(level)&user=\(user)&win=\(win)&loss=\(loss)"
+        request.httpBody = postString.data(using: String.Encoding.utf8)
+        
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            
+            if error != nil {
+                print("error=\(String(describing: error))")
+                return
+            }
+            
+            print("response = \(String(describing: response))")
+            
+            let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+            print("responseString = \(String(describing: responseString))")
+        }
+        task.resume()
+        
+    }
    
     
 }

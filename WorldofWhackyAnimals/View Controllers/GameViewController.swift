@@ -20,6 +20,8 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //Load the SKScene on the view and scale to fit
+         NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.doaSegue), name: NSNotification.Name(rawValue: "doaSegue"), object: nil)
+        
         if let view = self.view as! SKView? {
             if let scene = GameScene(fileNamed: "GameScene") {
                 scene.scaleMode = .fill
@@ -30,6 +32,12 @@ class GameViewController: UIViewController {
             view.showsFPS = false
             view.showsNodeCount = false
         }
+    }
+    
+   @objc func doaSegue(){
+        performSegue(withIdentifier: "toHome", sender: self)
+        self.view.removeFromSuperview()
+        self.view = nil
     }
     
     @IBAction func btnContinue(_ sender: Any) {

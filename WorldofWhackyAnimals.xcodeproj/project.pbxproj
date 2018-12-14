@@ -13,6 +13,8 @@
 		9284BCC821C36A5D00CAE1B5 /* InsertNewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284BCC621C36A5D00CAE1B5 /* InsertNewUser.swift */; };
 		9284BCF721C3EFFE00CAE1B5 /* WhackSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284BCF621C3EFFE00CAE1B5 /* WhackSlot.swift */; };
 		9284BCFA21C3F03F00CAE1B5 /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9284BCF921C3F03F00CAE1B5 /* whack.caf */; };
+		9284BCFC21C3F3BE00CAE1B5 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9284BCFB21C3F3BE00CAE1B5 /* GameOverScene.sks */; };
+		9284BCFE21C3F3D600CAE1B5 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284BCFD21C3F3D600CAE1B5 /* GameOverScene.swift */; };
 		92E703F521A0D4B1003DEE1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E703F421A0D4B1003DEE1F /* AppDelegate.swift */; };
 		92E703F721A0D4B1003DEE1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E703F621A0D4B1003DEE1F /* ViewController.swift */; };
 		92E703FA21A0D4B1003DEE1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E703F821A0D4B1003DEE1F /* Main.storyboard */; };
@@ -93,6 +95,8 @@
 		9284BCC621C36A5D00CAE1B5 /* InsertNewUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertNewUser.swift; sourceTree = "<group>"; };
 		9284BCF621C3EFFE00CAE1B5 /* WhackSlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhackSlot.swift; sourceTree = "<group>"; };
 		9284BCF921C3F03F00CAE1B5 /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whack.caf; sourceTree = "<group>"; };
+		9284BCFB21C3F3BE00CAE1B5 /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
+		9284BCFD21C3F3D600CAE1B5 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		92E703F121A0D4B1003DEE1F /* WorldofWhackyAnimals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldofWhackyAnimals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E703F421A0D4B1003DEE1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92E703F621A0D4B1003DEE1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -249,6 +253,8 @@
 				92E7042121A1DC47003DEE1F /* GameScene.swift */,
 				92E7042521A1DEB4003DEE1F /* GameScene.sks */,
 				92E7042721A1DEC8003DEE1F /* Action.sks */,
+				9284BCFB21C3F3BE00CAE1B5 /* GameOverScene.sks */,
+				9284BCFD21C3F3D600CAE1B5 /* GameOverScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -378,6 +384,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9284BCFC21C3F3BE00CAE1B5 /* GameOverScene.sks in Resources */,
 				92E7042621A1DEB4003DEE1F /* GameScene.sks in Resources */,
 				92E703FF21A0D4B4003DEE1F /* LaunchScreen.storyboard in Resources */,
 				92E703FC21A0D4B4003DEE1F /* Assets.xcassets in Resources */,
@@ -420,6 +427,7 @@
 				92E7040E21A1CD80003DEE1F /* PlayerStatsViewController.swift in Sources */,
 				92E703F721A0D4B1003DEE1F /* ViewController.swift in Sources */,
 				92E7041421A1CDD9003DEE1F /* GamesStatisticsViewController.swift in Sources */,
+				9284BCFE21C3F3D600CAE1B5 /* GameOverScene.swift in Sources */,
 				92E7042221A1DC47003DEE1F /* GameScene.swift in Sources */,
 				92E703F521A0D4B1003DEE1F /* AppDelegate.swift in Sources */,
 				92E7041621A1CDFA003DEE1F /* ChangePlayerViewController.swift in Sources */,

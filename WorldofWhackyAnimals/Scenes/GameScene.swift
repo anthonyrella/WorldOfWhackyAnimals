@@ -21,10 +21,12 @@ class GameScene: SKScene {
     var slots = [WhackSlot]()
     var popupTime = 0.00
     var numRounds = 0
-    var level = 0
+    var level = 8
     var lblMessage = ""
     var btnTitle = ""
     var gameViewController: GameViewController?
+    public static var endScore = 0
+    let postData = GetData()
     
     //Use of property observer to update score everytime the variable is set
     var totalEnemies = 0 {
@@ -125,6 +127,8 @@ class GameScene: SKScene {
             //Based on game results dynamically adjusts the message and button title for the popover
             if score > totalEnemies {
                 
+                postData.postData(level: level, user: appDelegate.currentUser, win: 1, loss: 0)
+                
                 //Check if player has levels left to unlock
                 if appDelegate.levelOfDifficulty < 8 {
                     
@@ -139,15 +143,32 @@ class GameScene: SKScene {
                     btnTitle = "Play Again"
                 }
             }else{
+                 postData.postData(level: level, user: appDelegate.currentUser, win: 0, loss: 1)
                 lblMessage = "Better luck next time."
                 btnTitle = "Try Again"
             }
             
             
             //Call loadPopover method from GameViewController
-            gameViewController?.loadPopover(lblMsg: lblMessage, btnTtl: btnTitle)
+          //  gameViewController?.loadPopover(lblMsg: lblMessage, btnTtl: btnTitle)
             
             //exit method to stop createEnemy()
+           
+            GameScene.endScore = score
+            if let scene = GameOverScene(fileNamed:"GameOverScene") {
+                
+                let skView = self.view! as SKView
+                
+                
+                skView.ignoresSiblingOrder = true
+                
+                scene.scaleMode = .fill
+                scene.size = skView.bounds.size
+                
+                skView.presentScene(scene, transition: SKTransition.fade(withDuration: 2))
+            }
+            
+            
             return
         }
         
