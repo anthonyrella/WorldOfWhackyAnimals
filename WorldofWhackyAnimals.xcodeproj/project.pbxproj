@@ -22,20 +22,7 @@
 		92E7041F21A1D985003DEE1F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E7041E21A1D985003DEE1F /* GameViewController.swift */; };
 		92E7042221A1DC47003DEE1F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E7042121A1DC47003DEE1F /* GameScene.swift */; };
 		92E7042621A1DEB4003DEE1F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 92E7042521A1DEB4003DEE1F /* GameScene.sks */; };
-		AE885E9E21C2ECC800B4BF43 /* kangaroo-australia.png in Resources */ = {isa = PBXBuildFile; fileRef = AE885E9721C2ECC700B4BF43 /* kangaroo-australia.png */; };
-		AE885E9F21C2ECC800B4BF43 /* lion-africa.png in Resources */ = {isa = PBXBuildFile; fileRef = AE885E9821C2ECC800B4BF43 /* lion-africa.png */; };
-		AE885EA021C2ECC800B4BF43 /* penguin-antarctica.png in Resources */ = {isa = PBXBuildFile; fileRef = AE885E9921C2ECC800B4BF43 /* penguin-antarctica.png */; };
-		AE885EA121C2ECC800B4BF43 /* jaguar-southamerica.png in Resources */ = {isa = PBXBuildFile; fileRef = AE885E9A21C2ECC800B4BF43 /* jaguar-southamerica.png */; };
-		AE885EA221C2ECC800B4BF43 /* reindeer-europe.png in Resources */ = {isa = PBXBuildFile; fileRef = AE885E9B21C2ECC800B4BF43 /* reindeer-europe.png */; };
-		AE885EA321C2ECC800B4BF43 /* dragonfly-bonus.png in Resources */ = {isa = PBXBuildFile; fileRef = AE885E9C21C2ECC800B4BF43 /* dragonfly-bonus.png */; };
-		AE885EA421C2ECC800B4BF43 /* panda-asia.png in Resources */ = {isa = PBXBuildFile; fileRef = AE885E9D21C2ECC800B4BF43 /* panda-asia.png */; };
-		AE885EA621C2F20D00B4BF43 /* bear-northamerica.png in Resources */ = {isa = PBXBuildFile; fileRef = AE885EA521C2F20C00B4BF43 /* bear-northamerica.png */; };
-		AEF5377D21C06C0F00E3C956 /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = AEF5377B21C06C0E00E3C956 /* whack.caf */; };
-		AEF5378C21C06C1A00E3C956 /* whackBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF5378021C06C1A00E3C956 /* whackBackground.png */; };
-		AEF5379321C06C1A00E3C956 /* whackHole.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF5378721C06C1A00E3C956 /* whackHole.png */; };
-		AEF5379421C06C1A00E3C956 /* gameOver.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF5378821C06C1A00E3C956 /* gameOver.png */; };
-		AEF5379521C06C1A00E3C956 /* whackMask.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF5378921C06C1A00E3C956 /* whackMask.png */; };
-		AEF5379921C06FB100E3C956 /* Chalkduster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AEF5379821C06FB100E3C956 /* Chalkduster.ttf */; };
+		AE9B2C4021C3D79B0099B2A6 /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = AE9B2C3F21C3D79B0099B2A6 /* whack.caf */; };
 		AEF5379B21C06FEC00E3C956 /* WhackSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF5379A21C06FEC00E3C956 /* WhackSlot.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,20 +44,7 @@
 		92E7041E21A1D985003DEE1F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		92E7042121A1DC47003DEE1F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		92E7042521A1DEB4003DEE1F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		AE885E9721C2ECC700B4BF43 /* kangaroo-australia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kangaroo-australia.png"; sourceTree = "<group>"; };
-		AE885E9821C2ECC800B4BF43 /* lion-africa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lion-africa.png"; sourceTree = "<group>"; };
-		AE885E9921C2ECC800B4BF43 /* penguin-antarctica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "penguin-antarctica.png"; sourceTree = "<group>"; };
-		AE885E9A21C2ECC800B4BF43 /* jaguar-southamerica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jaguar-southamerica.png"; sourceTree = "<group>"; };
-		AE885E9B21C2ECC800B4BF43 /* reindeer-europe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reindeer-europe.png"; sourceTree = "<group>"; };
-		AE885E9C21C2ECC800B4BF43 /* dragonfly-bonus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragonfly-bonus.png"; sourceTree = "<group>"; };
-		AE885E9D21C2ECC800B4BF43 /* panda-asia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "panda-asia.png"; sourceTree = "<group>"; };
-		AE885EA521C2F20C00B4BF43 /* bear-northamerica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bear-northamerica.png"; sourceTree = "<group>"; };
-		AEF5377B21C06C0E00E3C956 /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whack.caf; sourceTree = "<group>"; };
-		AEF5378021C06C1A00E3C956 /* whackBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whackBackground.png; sourceTree = "<group>"; };
-		AEF5378721C06C1A00E3C956 /* whackHole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whackHole.png; sourceTree = "<group>"; };
-		AEF5378821C06C1A00E3C956 /* gameOver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameOver.png; sourceTree = "<group>"; };
-		AEF5378921C06C1A00E3C956 /* whackMask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whackMask.png; sourceTree = "<group>"; };
-		AEF5379821C06FB100E3C956 /* Chalkduster.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chalkduster.ttf; sourceTree = "<group>"; };
+		AE9B2C3F21C3D79B0099B2A6 /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whack.caf; sourceTree = "<group>"; };
 		AEF5379A21C06FEC00E3C956 /* WhackSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhackSlot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,9 +80,7 @@
 		92E703F321A0D4B1003DEE1F /* WorldofWhackyAnimals */ = {
 			isa = PBXGroup;
 			children = (
-				AEF5379721C06F9E00E3C956 /* Fonts */,
-				AEF5377521C0650D00E3C956 /* Audio */,
-				AEF5377421C0646B00E3C956 /* Images */,
+				AE9B2C3E21C3D75F0099B2A6 /* Sound FX */,
 				92E7042021A1DB62003DEE1F /* Scenes */,
 				92E7040821A1C5B1003DEE1F /* View Controllers */,
 				92E7040721A1C5A2003DEE1F /* Special Classes */,
@@ -169,39 +141,12 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		AEF5377421C0646B00E3C956 /* Images */ = {
+		AE9B2C3E21C3D75F0099B2A6 /* Sound FX */ = {
 			isa = PBXGroup;
 			children = (
-				AE885EA521C2F20C00B4BF43 /* bear-northamerica.png */,
-				AE885E9C21C2ECC800B4BF43 /* dragonfly-bonus.png */,
-				AE885E9A21C2ECC800B4BF43 /* jaguar-southamerica.png */,
-				AE885E9721C2ECC700B4BF43 /* kangaroo-australia.png */,
-				AE885E9821C2ECC800B4BF43 /* lion-africa.png */,
-				AE885E9D21C2ECC800B4BF43 /* panda-asia.png */,
-				AE885E9921C2ECC800B4BF43 /* penguin-antarctica.png */,
-				AE885E9B21C2ECC800B4BF43 /* reindeer-europe.png */,
-				AEF5378821C06C1A00E3C956 /* gameOver.png */,
-				AEF5378021C06C1A00E3C956 /* whackBackground.png */,
-				AEF5378721C06C1A00E3C956 /* whackHole.png */,
-				AEF5378921C06C1A00E3C956 /* whackMask.png */,
+				AE9B2C3F21C3D79B0099B2A6 /* whack.caf */,
 			);
-			path = Images;
-			sourceTree = "<group>";
-		};
-		AEF5377521C0650D00E3C956 /* Audio */ = {
-			isa = PBXGroup;
-			children = (
-				AEF5377B21C06C0E00E3C956 /* whack.caf */,
-			);
-			path = Audio;
-			sourceTree = "<group>";
-		};
-		AEF5379721C06F9E00E3C956 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				AEF5379821C06FB100E3C956 /* Chalkduster.ttf */,
-			);
-			path = Fonts;
+			path = "Sound FX";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,24 +207,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE885EA321C2ECC800B4BF43 /* dragonfly-bonus.png in Resources */,
-				AE885EA121C2ECC800B4BF43 /* jaguar-southamerica.png in Resources */,
-				AE885EA621C2F20D00B4BF43 /* bear-northamerica.png in Resources */,
 				92E7042621A1DEB4003DEE1F /* GameScene.sks in Resources */,
-				AEF5379521C06C1A00E3C956 /* whackMask.png in Resources */,
-				AE885EA021C2ECC800B4BF43 /* penguin-antarctica.png in Resources */,
-				AE885E9E21C2ECC800B4BF43 /* kangaroo-australia.png in Resources */,
-				AEF5379321C06C1A00E3C956 /* whackHole.png in Resources */,
-				AE885EA221C2ECC800B4BF43 /* reindeer-europe.png in Resources */,
+				AE9B2C4021C3D79B0099B2A6 /* whack.caf in Resources */,
 				92E703FF21A0D4B4003DEE1F /* LaunchScreen.storyboard in Resources */,
-				AEF5377D21C06C0F00E3C956 /* whack.caf in Resources */,
-				AE885E9F21C2ECC800B4BF43 /* lion-africa.png in Resources */,
-				AE885EA421C2ECC800B4BF43 /* panda-asia.png in Resources */,
 				92E703FC21A0D4B4003DEE1F /* Assets.xcassets in Resources */,
 				92E703FA21A0D4B1003DEE1F /* Main.storyboard in Resources */,
-				AEF5378C21C06C1A00E3C956 /* whackBackground.png in Resources */,
-				AEF5379921C06FB100E3C956 /* Chalkduster.ttf in Resources */,
-				AEF5379421C06C1A00E3C956 /* gameOver.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
