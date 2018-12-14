@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9284BCC221C3670700CAE1B5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284BCC121C3670700CAE1B5 /* WelcomeViewController.swift */; };
+		9284BCC421C36A3700CAE1B5 /* GetUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284BCC321C36A3700CAE1B5 /* GetUserData.swift */; };
+		9284BCC721C36A5D00CAE1B5 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284BCC521C36A5D00CAE1B5 /* UserTableViewCell.swift */; };
+		9284BCC821C36A5D00CAE1B5 /* InsertNewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284BCC621C36A5D00CAE1B5 /* InsertNewUser.swift */; };
 		92E703F521A0D4B1003DEE1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E703F421A0D4B1003DEE1F /* AppDelegate.swift */; };
 		92E703F721A0D4B1003DEE1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E703F621A0D4B1003DEE1F /* ViewController.swift */; };
 		92E703FA21A0D4B1003DEE1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E703F821A0D4B1003DEE1F /* Main.storyboard */; };
@@ -28,9 +32,63 @@
 		92E7042D21A2133E003DEE1F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E7042C21A2133E003DEE1F /* MapKit.framework */; };
 		92E7053621C2F430003DEE1F /* TopTenPlayerStatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E7053521C2F430003DEE1F /* TopTenPlayerStatTableViewCell.swift */; };
 		92E7053821C2F4B5003DEE1F /* getData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E7053721C2F4B5003DEE1F /* getData.swift */; };
+		92ECF66521C362D5008207B5 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92ECF66321C362D5008207B5 /* Interface.storyboard */; };
+		92ECF66721C362D8008207B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92ECF66621C362D8008207B5 /* Assets.xcassets */; };
+		92ECF66E21C362D8008207B5 /* WoWAWatchApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 92ECF66D21C362D8008207B5 /* WoWAWatchApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		92ECF67321C362D8008207B5 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ECF67221C362D8008207B5 /* InterfaceController.swift */; };
+		92ECF67521C362D8008207B5 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ECF67421C362D8008207B5 /* ExtensionDelegate.swift */; };
+		92ECF67721C362D8008207B5 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ECF67621C362D8008207B5 /* NotificationController.swift */; };
+		92ECF67921C362D9008207B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92ECF67821C362D9008207B5 /* Assets.xcassets */; };
+		92ECF67E21C362D9008207B5 /* WoWAWatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 92ECF66121C362D5008207B5 /* WoWAWatchApp.app */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		92ECF66F21C362D8008207B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92E703E921A0D4B1003DEE1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92ECF66C21C362D8008207B5;
+			remoteInfo = "WoWAWatchApp Extension";
+		};
+		92ECF67C21C362D9008207B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92E703E921A0D4B1003DEE1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92ECF66021C362D5008207B5;
+			remoteInfo = WoWAWatchApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		92ECF68421C362D9008207B5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				92ECF66E21C362D8008207B5 /* WoWAWatchApp Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92ECF68621C362D9008207B5 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				92ECF67E21C362D9008207B5 /* WoWAWatchApp.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		9284BCC121C3670700CAE1B5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		9284BCC321C36A3700CAE1B5 /* GetUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserData.swift; sourceTree = "<group>"; };
+		9284BCC521C36A5D00CAE1B5 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		9284BCC621C36A5D00CAE1B5 /* InsertNewUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertNewUser.swift; sourceTree = "<group>"; };
 		92E703F121A0D4B1003DEE1F /* WorldofWhackyAnimals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldofWhackyAnimals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E703F421A0D4B1003DEE1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92E703F621A0D4B1003DEE1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +112,17 @@
 		92E7042C21A2133E003DEE1F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		92E7053521C2F430003DEE1F /* TopTenPlayerStatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTenPlayerStatTableViewCell.swift; sourceTree = "<group>"; };
 		92E7053721C2F4B5003DEE1F /* getData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getData.swift; sourceTree = "<group>"; };
+		92ECF66121C362D5008207B5 /* WoWAWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WoWAWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92ECF66421C362D5008207B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		92ECF66621C362D8008207B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92ECF66821C362D8008207B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92ECF66D21C362D8008207B5 /* WoWAWatchApp Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WoWAWatchApp Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92ECF67221C362D8008207B5 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		92ECF67421C362D8008207B5 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		92ECF67621C362D8008207B5 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		92ECF67821C362D9008207B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92ECF67A21C362D9008207B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92ECF67B21C362D9008207B5 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +136,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92ECF66A21C362D8008207B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -74,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				92E703F321A0D4B1003DEE1F /* WorldofWhackyAnimals */,
+				92ECF66221C362D5008207B5 /* WoWAWatchApp */,
+				92ECF67121C362D8008207B5 /* WoWAWatchApp Extension */,
 				92E703F221A0D4B1003DEE1F /* Products */,
 				92E7041B21A1D794003DEE1F /* Frameworks */,
 			);
@@ -83,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				92E703F121A0D4B1003DEE1F /* WorldofWhackyAnimals.app */,
+				92ECF66121C362D5008207B5 /* WoWAWatchApp.app */,
+				92ECF66D21C362D8008207B5 /* WoWAWatchApp Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +192,9 @@
 		92E7040721A1C5A2003DEE1F /* Special Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9284BCC621C36A5D00CAE1B5 /* InsertNewUser.swift */,
+				9284BCC521C36A5D00CAE1B5 /* UserTableViewCell.swift */,
+				9284BCC321C36A3700CAE1B5 /* GetUserData.swift */,
 				92E703F421A0D4B1003DEE1F /* AppDelegate.swift */,
 				92E7053521C2F430003DEE1F /* TopTenPlayerStatTableViewCell.swift */,
 				92E7053721C2F4B5003DEE1F /* getData.swift */,
@@ -131,6 +214,7 @@
 				92E7041321A1CDD9003DEE1F /* GamesStatisticsViewController.swift */,
 				92E7041521A1CDFA003DEE1F /* ChangePlayerViewController.swift */,
 				92E7041E21A1D985003DEE1F /* GameViewController.swift */,
+				9284BCC121C3670700CAE1B5 /* WelcomeViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -155,6 +239,29 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		92ECF66221C362D5008207B5 /* WoWAWatchApp */ = {
+			isa = PBXGroup;
+			children = (
+				92ECF66321C362D5008207B5 /* Interface.storyboard */,
+				92ECF66621C362D8008207B5 /* Assets.xcassets */,
+				92ECF66821C362D8008207B5 /* Info.plist */,
+			);
+			path = WoWAWatchApp;
+			sourceTree = "<group>";
+		};
+		92ECF67121C362D8008207B5 /* WoWAWatchApp Extension */ = {
+			isa = PBXGroup;
+			children = (
+				92ECF67221C362D8008207B5 /* InterfaceController.swift */,
+				92ECF67421C362D8008207B5 /* ExtensionDelegate.swift */,
+				92ECF67621C362D8008207B5 /* NotificationController.swift */,
+				92ECF67821C362D9008207B5 /* Assets.xcassets */,
+				92ECF67A21C362D9008207B5 /* Info.plist */,
+				92ECF67B21C362D9008207B5 /* PushNotificationPayload.apns */,
+			);
+			path = "WoWAWatchApp Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,15 +272,51 @@
 				92E703ED21A0D4B1003DEE1F /* Sources */,
 				92E703EE21A0D4B1003DEE1F /* Frameworks */,
 				92E703EF21A0D4B1003DEE1F /* Resources */,
+				92ECF68621C362D9008207B5 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				92ECF67D21C362D9008207B5 /* PBXTargetDependency */,
 			);
 			name = WorldofWhackyAnimals;
 			productName = WorldofWhackyAnimals;
 			productReference = 92E703F121A0D4B1003DEE1F /* WorldofWhackyAnimals.app */;
 			productType = "com.apple.product-type.application";
+		};
+		92ECF66021C362D5008207B5 /* WoWAWatchApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92ECF68521C362D9008207B5 /* Build configuration list for PBXNativeTarget "WoWAWatchApp" */;
+			buildPhases = (
+				92ECF65F21C362D5008207B5 /* Resources */,
+				92ECF68421C362D9008207B5 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92ECF67021C362D8008207B5 /* PBXTargetDependency */,
+			);
+			name = WoWAWatchApp;
+			productName = WoWAWatchApp;
+			productReference = 92ECF66121C362D5008207B5 /* WoWAWatchApp.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		92ECF66C21C362D8008207B5 /* WoWAWatchApp Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92ECF68321C362D9008207B5 /* Build configuration list for PBXNativeTarget "WoWAWatchApp Extension" */;
+			buildPhases = (
+				92ECF66921C362D8008207B5 /* Sources */,
+				92ECF66A21C362D8008207B5 /* Frameworks */,
+				92ECF66B21C362D8008207B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WoWAWatchApp Extension";
+			productName = "WoWAWatchApp Extension";
+			productReference = 92ECF66D21C362D8008207B5 /* WoWAWatchApp Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -186,6 +329,12 @@
 				ORGANIZATIONNAME = AnthonyRella;
 				TargetAttributes = {
 					92E703F021A0D4B1003DEE1F = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					92ECF66021C362D5008207B5 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					92ECF66C21C362D8008207B5 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -204,6 +353,8 @@
 			projectRoot = "";
 			targets = (
 				92E703F021A0D4B1003DEE1F /* WorldofWhackyAnimals */,
+				92ECF66021C362D5008207B5 /* WoWAWatchApp */,
+				92ECF66C21C362D8008207B5 /* WoWAWatchApp Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -221,6 +372,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92ECF65F21C362D5008207B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92ECF66721C362D8008207B5 /* Assets.xcassets in Resources */,
+				92ECF66521C362D5008207B5 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92ECF66B21C362D8008207B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92ECF67921C362D9008207B5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -232,6 +400,7 @@
 				92E7053821C2F4B5003DEE1F /* getData.swift in Sources */,
 				92E7041F21A1D985003DEE1F /* GameViewController.swift in Sources */,
 				92E7040A21A1CD41003DEE1F /* ContinentSelectionViewController.swift in Sources */,
+				9284BCC721C36A5D00CAE1B5 /* UserTableViewCell.swift in Sources */,
 				92E7040E21A1CD80003DEE1F /* PlayerStatsViewController.swift in Sources */,
 				92E703F721A0D4B1003DEE1F /* ViewController.swift in Sources */,
 				92E7041421A1CDD9003DEE1F /* GamesStatisticsViewController.swift in Sources */,
@@ -239,12 +408,38 @@
 				92E703F521A0D4B1003DEE1F /* AppDelegate.swift in Sources */,
 				92E7041621A1CDFA003DEE1F /* ChangePlayerViewController.swift in Sources */,
 				92E7041821A1D27B003DEE1F /* DirectionsViewController.swift in Sources */,
+				9284BCC421C36A3700CAE1B5 /* GetUserData.swift in Sources */,
 				92E7040C21A1CD5B003DEE1F /* SettingsViewController.swift in Sources */,
+				9284BCC821C36A5D00CAE1B5 /* InsertNewUser.swift in Sources */,
 				92E7041A21A1D293003DEE1F /* StoresNearMeViewController.swift in Sources */,
+				9284BCC221C3670700CAE1B5 /* WelcomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92ECF66921C362D8008207B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92ECF67721C362D8008207B5 /* NotificationController.swift in Sources */,
+				92ECF67521C362D8008207B5 /* ExtensionDelegate.swift in Sources */,
+				92ECF67321C362D8008207B5 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92ECF67021C362D8008207B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92ECF66C21C362D8008207B5 /* WoWAWatchApp Extension */;
+			targetProxy = 92ECF66F21C362D8008207B5 /* PBXContainerItemProxy */;
+		};
+		92ECF67D21C362D9008207B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92ECF66021C362D5008207B5 /* WoWAWatchApp */;
+			targetProxy = 92ECF67C21C362D9008207B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		92E703F821A0D4B1003DEE1F /* Main.storyboard */ = {
@@ -261,6 +456,14 @@
 				92E703FE21A0D4B4003DEE1F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		92ECF66321C362D5008207B5 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92ECF66421C362D5008207B5 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -416,6 +619,84 @@
 			};
 			name = Release;
 		};
+		92ECF67F21C362D9008207B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = WoWAWatchApp_Extension;
+				INFOPLIST_FILE = WoWAWatchApp/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = RADS.WorldofWhackyAnimals.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		92ECF68021C362D9008207B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = WoWAWatchApp_Extension;
+				INFOPLIST_FILE = WoWAWatchApp/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = RADS.WorldofWhackyAnimals.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		92ECF68121C362D9008207B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "WoWAWatchApp Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RADS.WorldofWhackyAnimals.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		92ECF68221C362D9008207B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "WoWAWatchApp Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RADS.WorldofWhackyAnimals.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -433,6 +714,24 @@
 			buildConfigurations = (
 				92E7040421A0D4B4003DEE1F /* Debug */,
 				92E7040521A0D4B4003DEE1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92ECF68321C362D9008207B5 /* Build configuration list for PBXNativeTarget "WoWAWatchApp Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92ECF68121C362D9008207B5 /* Debug */,
+				92ECF68221C362D9008207B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92ECF68521C362D9008207B5 /* Build configuration list for PBXNativeTarget "WoWAWatchApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92ECF67F21C362D9008207B5 /* Debug */,
+				92ECF68021C362D9008207B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -66,64 +66,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecl-yw-i2B">
-                                <rect key="frame" x="458" y="276" width="154" height="66"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whack" translatesAutoresizingMaskIntoConstraints="NO" id="sy2-us-tcS">
+                                <rect key="frame" x="0.0" y="0.0" width="315" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Continent Selection"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WORLD OF WHACKY ANIMALS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsg-62-KTy">
+                                <rect key="frame" x="315" y="-4" width="350" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                <color key="textColor" red="1" green="0.02328635045" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yV3-Sr-6Ff">
+                                <rect key="frame" x="323" y="170" width="331" height="123"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="c4o-Bd-PcH" kind="presentation" id="53p-Tk-Zrc"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="RNa-pN-L2J"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="BTI-wB-NcD"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6p-Ju-7t6">
+                                <rect key="frame" x="339" y="309" width="129" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96746058180000005" green="0.6948215083" blue="0.028657661179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="START"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="cqF-7w-1a8" kind="presentation" id="vhF-n8-22o"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGY-oQ-WMC">
-                                <rect key="frame" x="256" y="276" width="154" height="66"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0h-SY-nJy">
+                                <rect key="frame" x="509" y="309" width="129" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Player Statistics"/>
+                                <color key="backgroundColor" red="0.96746058180000005" green="0.6948215083" blue="0.028657661179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="EXIT"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="CRp-f4-rcu" kind="presentation" id="fJg-ph-hxZ"/>
+                                    <action selector="closeWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dQP-jK-taC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ag0-AW-f8V">
-                                <rect key="frame" x="458" y="141" width="154" height="66"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OR  SELECT YOUR USERNAME" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0GP-WX-BZi">
+                                <rect key="frame" x="372" y="96" width="232" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Settings"/>
-                                <connections>
-                                    <segue destination="Q7u-fE-MXe" kind="presentation" id="IB6-xF-LoL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSz-A3-zuM">
-                                <rect key="frame" x="458" y="20" width="154" height="66"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3h-kD-qpI">
+                                <rect key="frame" x="339" y="45" width="299" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Change Player"/>
+                                <color key="backgroundColor" name="selectedControlColor" catalog="System" colorSpace="catalog"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <state key="normal" title="New Player!"/>
                                 <connections>
-                                    <segue destination="191-hj-qx2" kind="presentation" id="E2a-bx-9ZW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIa-Mf-qSO">
-                                <rect key="frame" x="44" y="276" width="154" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Stores Near Me"/>
-                                <connections>
-                                    <segue destination="aeR-pB-Ovh" kind="presentation" id="fTq-pS-NAp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ak-vn-pLb">
-                                <rect key="frame" x="44" y="20" width="222" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Play Game"/>
-                                <connections>
-                                    <segue destination="aBI-yD-r2R" kind="presentation" id="yWE-Jt-Roq"/>
+                                    <segue destination="191-hj-qx2" kind="presentation" id="pST-ca-8Hz"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.76778727769851685" green="0.91519123315811157" blue="0.98868566751480103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="addUser" destination="D3h-kD-qpI" id="Gya-bj-F1E"/>
+                        <outlet property="button" destination="R6p-Ju-7t6" id="Bxg-SC-88i"/>
+                        <outlet property="userPickerView" destination="yV3-Sr-6Ff" id="7bA-XT-46l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -142,23 +160,116 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Change Player" id="sQ6-Em-Omm">
-                                        <barButtonItem key="leftBarButtonItem" title="Home" id="sl1-H9-24c">
+                                        <barButtonItem key="leftBarButtonItem" title="Go Back" id="sl1-H9-24c">
                                             <connections>
-                                                <segue destination="GGv-Ww-78a" kind="unwind" unwindAction="unwindToHomeViewControllerWithSegue:" id="i8c-wj-yRJ"/>
+                                                <segue destination="GGv-Ww-78a" kind="unwind" identifier="unwindToWelcome" unwindAction="unwindToWelcomeViewControllerWithSegue:" id="Nab-Li-vU2"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GzG-pr-gUx">
+                                <rect key="frame" x="292" y="138" width="365" height="228"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" rowHeight="51" id="mqa-Jh-DB0" customClass="UserTableViewCell" customModule="WorldofWhackyAnimals" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="365" height="51"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mqa-Jh-DB0" id="Ghr-pa-by7">
+                                            <rect key="frame" x="0.0" y="0.0" width="365" height="50.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9O-JU-zfV">
+                                                    <rect key="frame" x="15" y="9" width="243" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="Rockwell-Italic" family="Rockwell" pointSize="28"/>
+                                                    <color key="textColor" red="0.81059088989999994" green="0.2766299062" blue="0.031728741349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHS-a2-PX3">
+                                                    <rect key="frame" x="283" y="9" width="67" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="28"/>
+                                                    <color key="textColor" red="0.81059088989999994" green="0.2766299062" blue="0.031728741349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="lblLevel" destination="OHS-a2-PX3" id="JDW-Tr-eXr"/>
+                                            <outlet property="lblUserName" destination="V9O-JU-zfV" id="Jr6-UI-hZX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="191-hj-qx2" id="fld-7G-qxd"/>
+                                    <outlet property="delegate" destination="191-hj-qx2" id="CEE-xi-Wi5"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New player name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="r1U-Zf-vrM">
+                                <rect key="frame" x="18" y="96" width="266" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Player or Select from existing players" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crA-qT-1JW">
+                                <rect key="frame" x="18" y="32" width="639" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="33"/>
+                                <color key="textColor" red="0.0" green="0.25845935190000002" blue="0.43444082639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mJ-fD-NmI">
+                                <rect key="frame" x="292" y="83" width="247" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="30"/>
+                                <color key="textColor" red="0.22278245090000001" green="0.0094414806060000005" blue="0.92125475410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fai-km-2vx">
+                                <rect key="frame" x="547" y="83" width="110" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="30"/>
+                                <color key="textColor" red="0.22278245090000001" green="0.0094414806060000005" blue="0.92125475410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="players" translatesAutoresizingMaskIntoConstraints="NO" id="RXJ-PQ-TsJ">
+                                <rect key="frame" x="10" y="209" width="274" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vo4-BB-OCP">
+                                <rect key="frame" x="61" y="134" width="180" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="28"/>
+                                <state key="normal" title="Add Player">
+                                    <color key="titleColor" red="0.12097628940000001" green="0.4001372097" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPlayerClickedWithSender:" destination="191-hj-qx2" eventType="touchUpInside" id="rzd-b5-DjM"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.76778727769999999" green="0.91519123319999995" blue="0.98868566749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="eEb-VN-qnu"/>
                     </view>
+                    <connections>
+                        <outlet property="allUsersTable" destination="GzG-pr-gUx" id="Gx0-ut-Yun"/>
+                        <outlet property="btnAddPlayer" destination="Vo4-BB-OCP" id="jKk-3e-lz8"/>
+                        <outlet property="txtNewPlayer" destination="r1U-Zf-vrM" id="dfT-Tw-8eM"/>
+                        <segue destination="cqF-7w-1a8" kind="presentation" identifier="segueToWelcome" id="G7A-zo-J3n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Hb-p6-tou" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="GGv-Ww-78a" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="893" y="-1541"/>
+            <point key="canvasLocation" x="892.80359820089961" y="-1541.5999999999999"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="hbc-mS-1pg">
@@ -173,18 +284,52 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Setings" id="rMP-MP-Xea">
-                                        <barButtonItem key="leftBarButtonItem" title="Home" id="qgL-2c-M20">
+                                        <barButtonItem key="leftBarButtonItem" title="Go Back" id="qgL-2c-M20">
                                             <connections>
-                                                <segue destination="Gcu-yZ-ZOh" kind="unwind" unwindAction="unwindToHomeViewControllerWithSegue:" id="C9K-vF-yKa"/>
+                                                <segue destination="Gcu-yZ-ZOh" kind="unwind" unwindAction="unwindToWelcomeViewControllerWithSegue:" id="55q-o4-IUp"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="FcA-Ph-cTE">
+                                <rect key="frame" x="110" y="67" width="447" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderValueChangedWithSender:" destination="Q7u-fE-MXe" eventType="valueChanged" id="Cli-78-ZP1"/>
+                                </connections>
+                            </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sound" translatesAutoresizingMaskIntoConstraints="NO" id="5Ou-Qs-CmW">
+                                <rect key="frame" x="32" y="59" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcU-cr-Z2C">
+                                <rect key="frame" x="563" y="59" width="84" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="step2" translatesAutoresizingMaskIntoConstraints="NO" id="jAl-OV-ztj">
+                                <rect key="frame" x="334" y="159" width="313" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="step1" translatesAutoresizingMaskIntoConstraints="NO" id="FtW-Hy-w1W">
+                                <rect key="frame" x="20" y="159" width="306" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="howtoplay" translatesAutoresizingMaskIntoConstraints="NO" id="6ef-Z6-Vr8">
+                                <rect key="frame" x="112" y="104" width="443" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.76778727769999999" green="0.91519123319999995" blue="0.98868566749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="tRf-xj-ECn"/>
                     </view>
+                    <connections>
+                        <outlet property="lblVol" destination="CcU-cr-Z2C" id="eDq-J7-L21"/>
+                        <outlet property="sliderVol" destination="FcA-Ph-cTE" id="3PZ-dj-REE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z3O-z9-YYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Gcu-yZ-ZOh" userLabel="Exit" sceneMemberID="exit"/>
@@ -204,9 +349,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Continent Selection" id="3ty-Of-a1C">
-                                        <barButtonItem key="leftBarButtonItem" title="Home" id="a7L-pP-F4J">
+                                        <barButtonItem key="leftBarButtonItem" title="Go Back" id="a7L-pP-F4J">
                                             <connections>
-                                                <segue destination="bts-7R-zrN" kind="unwind" unwindAction="unwindToHomeViewControllerWithSegue:" id="ln9-le-q7C"/>
+                                                <segue destination="bts-7R-zrN" kind="unwind" unwindAction="unwindToWelcomeViewControllerWithSegue:" id="xxf-iL-Lr7"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -253,9 +398,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Player Statistics" id="Pyc-1V-yB5">
-                                        <barButtonItem key="leftBarButtonItem" title="Home" id="RFB-aA-nEm">
+                                        <barButtonItem key="leftBarButtonItem" title="Go Back" id="RFB-aA-nEm">
                                             <connections>
-                                                <segue destination="Ttj-2M-s98" kind="unwind" unwindAction="unwindToHomeViewControllerWithSegue:" id="vVW-iJ-mX5"/>
+                                                <segue destination="Ttj-2M-s98" kind="unwind" unwindAction="unwindToWelcomeViewControllerWithSegue:" id="Fxb-BT-Apk"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -416,55 +561,164 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03v-4n-AsP">
-                                <rect key="frame" x="467" y="269" width="154" height="66"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZZC-bR-kXL">
+                                <rect key="frame" x="0.0" y="33" width="667" height="342"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Directions"/>
-                                <connections>
-                                    <segue destination="2pU-JS-XDL" kind="presentation" id="RwY-Eo-Lje"/>
-                                </connections>
-                            </button>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="G64-Lm-3yY"/>
                     </view>
+                    <connections>
+                        <outlet property="myMapView" destination="ZZC-bR-kXL" id="aUH-XB-bJl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2f0-QI-ld4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="zCV-ZH-9dc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="896" y="1612"/>
+            <point key="canvasLocation" x="896" y="1764"/>
         </scene>
-        <!--Directions View Controller-->
-        <scene sceneID="OgL-hB-v7d">
+        <!--Welcome View Controller-->
+        <scene sceneID="e6n-va-vA3">
             <objects>
-                <viewController id="2pU-JS-XDL" customClass="DirectionsViewController" customModule="WorldofWhackyAnimals" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NII-Z6-Hol">
+                <viewController id="cqF-7w-1a8" customClass="WelcomeViewController" customModule="WorldofWhackyAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m1i-p4-rpm">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xwF-5V-cUd">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Loadingbg" translatesAutoresizingMaskIntoConstraints="NO" id="UJ2-Sz-m4Q">
+                                <rect key="frame" x="0.0" y="39" width="667" height="336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SGA-xY-YMf">
+                                <rect key="frame" x="0.0" y="7" width="667" height="32"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Directions" id="GVL-QK-o4S">
-                                        <barButtonItem key="leftBarButtonItem" title="Home" id="uKn-fN-nRc">
+                                    <navigationItem title="Welcome" id="95y-K8-ee2">
+                                        <barButtonItem key="leftBarButtonItem" title="Home" id="6G0-yZ-kIQ">
                                             <connections>
-                                                <segue destination="lI6-Rn-xzS" kind="unwind" unwindAction="unwindToHomeViewControllerWithSegue:" id="nkP-JF-mlq"/>
+                                                <segue destination="FcT-HC-4eS" kind="unwind" unwindAction="unwindToHomeViewControllerWithSegue:" id="EdA-KO-ZPB"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBL-hV-Km6">
+                                <rect key="frame" x="222" y="121" width="222" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.72087324090000005" blue="0.042422317879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                <color key="tintColor" red="0.96746058180000005" green="0.6948215083" blue="0.028657661179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Play Game">
+                                    <color key="titleColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaP-v4-rnm">
+                                <rect key="frame" x="222" y="171" width="222" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.23420574659999999" green="0.898000715" blue="0.099870735459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="19"/>
+                                <state key="normal" title="Continent Selection">
+                                    <color key="titleColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="c4o-Bd-PcH" kind="presentation" id="dML-w8-OGX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Hr-85-rld">
+                                <rect key="frame" x="222" y="217" width="222" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.72087324090000005" blue="0.042422317879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                <state key="normal" title="Change Player">
+                                    <color key="titleColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="191-hj-qx2" kind="presentation" id="d0R-US-meo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SdY-bd-GiF">
+                                <rect key="frame" x="615" y="333" width="39" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="settings"/>
+                                <connections>
+                                    <segue destination="Q7u-fE-MXe" kind="presentation" id="8PN-V1-cHP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKo-Sy-o0v">
+                                <rect key="frame" x="20" y="333" width="35" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="location"/>
+                                <connections>
+                                    <segue destination="aeR-pB-Ovh" kind="presentation" id="mvi-wT-KZ8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChC-Vc-MSY">
+                                <rect key="frame" x="222" y="267" width="222" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.074509803920000006" green="0.89411764709999997" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="19"/>
+                                <state key="normal" title="Player Statistics">
+                                    <color key="titleColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="CRp-f4-rcu" kind="presentation" id="obE-7p-pky"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsB-hu-zfm">
+                                <rect key="frame" x="256" y="64" width="154" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="9OC-vw-tIf"/>
+                        <viewLayoutGuide key="safeArea" id="8D6-Eg-zhE"/>
                     </view>
+                    <connections>
+                        <outlet property="name" destination="XsB-hu-zfm" id="Qj6-L9-tgp"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="V4d-kl-rmM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="lI6-Rn-xzS" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="djG-HB-cjG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="FcT-HC-4eS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1604" y="1625"/>
+            <point key="canvasLocation" x="53.523238380809602" y="885.60000000000002"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Loadingbg" width="1050" height="735"/>
+        <image name="howtoplay" width="891" height="207"/>
+        <image name="location" width="396.3870849609375" height="396.3870849609375"/>
+        <image name="players" width="122" height="115"/>
+        <image name="settings" width="512" height="512"/>
+        <image name="sound" width="401" height="306"/>
+        <image name="step1" width="107.51999664306641" height="100.08000183105469"/>
+        <image name="step2" width="107" height="99.360000610351562"/>
+        <image name="whack" width="235.19999694824219" height="235.19999694824219"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="G7A-zo-J3n"/>
+        <segue reference="d0R-US-meo"/>
+    </inferredMetricsTieBreakers>
 </document>
