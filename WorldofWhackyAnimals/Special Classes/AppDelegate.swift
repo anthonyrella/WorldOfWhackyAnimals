@@ -14,10 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     //this value is set on first load, and is updated only when user passes a level
-    var levelOfDifficulty: Int = 8
+    var levelOfDifficulty: Int = 2
     
     //Dejoun your code should check if this value has been set first. If not then start game with value from levelOfDifficulty. This is the value that gets changed when a user selects a level
     var currentDifficultySelection : Int? = nil
+    
+    var currentUser: String = "raj"
+    
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

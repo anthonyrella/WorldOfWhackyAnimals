@@ -26,6 +26,8 @@
 		92E7042821A1DEC8003DEE1F /* Action.sks in Resources */ = {isa = PBXBuildFile; fileRef = 92E7042721A1DEC8003DEE1F /* Action.sks */; };
 		92E7042B21A21336003DEE1F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E7042A21A21336003DEE1F /* CoreLocation.framework */; };
 		92E7042D21A2133E003DEE1F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E7042C21A2133E003DEE1F /* MapKit.framework */; };
+		92E7053621C2F430003DEE1F /* TopTenPlayerStatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E7053521C2F430003DEE1F /* TopTenPlayerStatTableViewCell.swift */; };
+		92E7053821C2F4B5003DEE1F /* getData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E7053721C2F4B5003DEE1F /* getData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		92E7042721A1DEC8003DEE1F /* Action.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Action.sks; sourceTree = "<group>"; };
 		92E7042A21A21336003DEE1F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		92E7042C21A2133E003DEE1F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		92E7053521C2F430003DEE1F /* TopTenPlayerStatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTenPlayerStatTableViewCell.swift; sourceTree = "<group>"; };
+		92E7053721C2F4B5003DEE1F /* getData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				92E703F421A0D4B1003DEE1F /* AppDelegate.swift */,
+				92E7053521C2F430003DEE1F /* TopTenPlayerStatTableViewCell.swift */,
+				92E7053721C2F4B5003DEE1F /* getData.swift */,
 			);
 			path = "Special Classes";
 			sourceTree = "<group>";
@@ -222,6 +228,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92E7053621C2F430003DEE1F /* TopTenPlayerStatTableViewCell.swift in Sources */,
+				92E7053821C2F4B5003DEE1F /* getData.swift in Sources */,
 				92E7041F21A1D985003DEE1F /* GameViewController.swift in Sources */,
 				92E7040A21A1CD41003DEE1F /* ContinentSelectionViewController.swift in Sources */,
 				92E7040E21A1CD80003DEE1F /* PlayerStatsViewController.swift in Sources */,
