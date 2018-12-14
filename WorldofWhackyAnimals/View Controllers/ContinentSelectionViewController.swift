@@ -5,6 +5,9 @@
 //  Created by Anthony Rella on 2018-11-18.
 //  Copyright © 2018 AnthonyRella. All rights reserved.
 //
+//  Primary Author: Anthony Rella
+//
+//  ContinentSelectionViewController is meant to display a map, with predefined annotations of which a user can select their level of play from.
 
 import UIKit
 import CoreLocation
@@ -34,7 +37,7 @@ class ContinentSelectionViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet var myMapView : MKMapView!
     
 
-    //todo center around current animal
+    // Will display the world map at its furthest range. Takes in a coordinate to center the map on
     private func updateMapToShowGlobe(location :CLLocationCoordinate2D) {
         let span = MKCoordinateSpan(latitudeDelta: 130, longitudeDelta: 130)
         let region = MKCoordinateRegion(center: location, span: span)
@@ -43,28 +46,27 @@ class ContinentSelectionViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // this blockwill determine how to set the Current Level Selection label. If user has selected a difficulty, the label will display their selection. Otherwise the difficulty is derived from the latest level of their achievement.
         if(appDelegate.currentDifficultySelection == nil){
         
             if(appDelegate.levelOfDifficulty != 8) {
             
                 if(appDelegate.currentDifficultySelection != 8){
                 
-                    //Fill selection label from initial app load from database level of difficulty first. Should we auto increment to higher level????????????????
+                    //Fill selection label from initial app load from database level of difficulty first.
                     levelSelectionLabel.text = "Current Level Selection: \(appDelegate.levelOfDifficulty)"
                     
                 }else{
                     
                   levelSelectionLabel.text = "Current Level Selection: BONUS"
                 }
-                
             }else{
-                
                   levelSelectionLabel.text = "Current Level Selection: BONUS"
             }
-           
         }else{
             
             if(appDelegate.currentDifficultySelection == 8){
@@ -74,10 +76,11 @@ class ContinentSelectionViewController: UIViewController, MKMapViewDelegate {
             }else{
                 levelSelectionLabel.text = "Current Level Selection: \(appDelegate.currentDifficultySelection!)"
             }
-            
         }
         
         updateMapToShowGlobe(location: globeLoc)
+        
+        //section below sets all the annotations on the map for each continent
         let northAmericaDropPin = MKPointAnnotation()
         let southAmericaDropPin = MKPointAnnotation()
         let europeDropPin = MKPointAnnotation()
@@ -140,7 +143,7 @@ class ContinentSelectionViewController: UIViewController, MKMapViewDelegate {
     
     }
     
-    
+    // will enable the annotations to have a call out menu once they are clicked
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
 
         if !(annotation is MKUserLocation) {
@@ -172,13 +175,10 @@ class ContinentSelectionViewController: UIViewController, MKMapViewDelegate {
                     
                 }
             }
-                
            return pinView
-           
         }else {
             return nil
         }
-        
     }
     
     // Level Selection. When the user presses the red plus sign, the level will get set in the app delegates currentDifficultySelection property
@@ -199,9 +199,6 @@ class ContinentSelectionViewController: UIViewController, MKMapViewDelegate {
                 
             }
            
-            
-            
-       
         }
     }
     

@@ -5,6 +5,9 @@
 //  Created by Anthony Rella on 2018-12-13.
 //  Copyright © 2018 AnthonyRella. All rights reserved.
 //
+//  Primary Author: Anthony Rella
+//
+//  TopTenPlayerStatTableViewCell is used to set the variables to be used in the top ten table
 
 import UIKit
 
