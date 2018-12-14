@@ -10,6 +10,11 @@
 import SpriteKit
 import GameplayKit
 
+//Protocol definition for accessing GameViewController function
+//rotocol GameViewControllerDelegate: class {
+    //static func loadPopover(lblMsg: String, btnTtl: String)
+//}
+
 class GameScene: SKScene {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var gameScore: SKLabelNode!
@@ -17,6 +22,9 @@ class GameScene: SKScene {
     var popupTime = 0.00
     var numRounds = 0
     var level = 0
+    var lblMessage = ""
+    var btnTitle = ""
+    var gameViewController: GameViewController?
     
     //Use of property observer to update score everytime the variable is set
     var totalEnemies = 0 {
@@ -29,8 +37,6 @@ class GameScene: SKScene {
             gameScore.text = "Score: \(score) / \(totalEnemies)"
         }
     }
-    
-    //Variable for accessing defined protocol
     
     //Adds all scenekit objects to the view
     override func didMove(to view: SKView) {
@@ -85,9 +91,9 @@ class GameScene: SKScene {
         for i in 0 ..< 5 { createSlot(at: CGPoint(x: 100 + (i * 170), y: 230)) }
         for i in 0 ..< 4 { createSlot(at: CGPoint(x: 180 + (i * 170), y: 140)) }
         
-        //Add first enemies to the screen after 1 second
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [unowned self] in
-            self.createEnemy()
+        //Asynchronously add first enemies to the screen after 1 second
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            self?.createEnemy()
         }
     }
     
@@ -104,14 +110,14 @@ class GameScene: SKScene {
         numRounds += 1
         
         //stops the game after creating a random number of enemies 45 times
-        if numRounds >= 40 {
+        if numRounds >= 35 {
             for slot in slots {
                 slot.hide()
             }
             
             //display game over image at the end of the game
             let gameOver = SKSpriteNode(imageNamed: "gameOver")
-            gameOver.position = CGPoint(x: 512, y: 384)
+            gameOver.position = CGPoint(x: 512, y: 650)
             gameOver.zPosition = 1
             addChild(gameOver)
             
@@ -126,21 +132,23 @@ class GameScene: SKScene {
                     if level == appDelegate.levelOfDifficulty{
                         appDelegate.levelOfDifficulty += 1
                     }
-                    appDelegate.lblMessage = "You Win!"
-                    appDelegate.btnTitle = "Next Level"
+                    lblMessage = "You Win!"
+                    btnTitle = "Next Level"
                 }else{
-                    appDelegate.lblMessage = "Congratulations! You beat every level!"
-                    appDelegate.btnTitle = "Play Again"
+                    lblMessage = "Congratulations! You beat every level!"
+                    btnTitle = "Play Again"
                 }
             }else{
-                appDelegate.lblMessage = "Better luck next time."
-                appDelegate.btnTitle = "Try Again"
+                lblMessage = "Better luck next time."
+                btnTitle = "Try Again"
             }
             
-            appDelegate.lblScore = gameScore.text!
             
-            //exit method to stop createEnemy() and wait for GameOver screen before continuing
-            return 
+            //Call loadPopover method from GameViewController
+            gameViewController?.loadPopover(lblMsg: lblMessage, btnTtl: btnTitle)
+            
+            //exit method to stop createEnemy()
+            return
         }
         
         //Randomly shuffles list of available slots
@@ -174,9 +182,9 @@ class GameScene: SKScene {
         srand48(Int(randomTime))
         let delay = minDelay + drand48() * (maxDelay-minDelay)
         
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [unowned self] in
-            self.createEnemy()
+        //Queues the process of timing each recursion to continue generating enemies at a steady pace
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
+            self?.createEnemy()
         }
     }
     

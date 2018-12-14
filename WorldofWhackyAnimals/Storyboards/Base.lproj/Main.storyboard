@@ -20,8 +20,45 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vDi-fH-2GG"/>
                     </view>
+                    <connections>
+                        <outlet property="btnContinue" destination="JnB-62-dDt" id="11D-ta-FKS"/>
+                        <outlet property="btnMainMenu" destination="qre-YI-ISD" id="Cmu-lz-ofE"/>
+                        <outlet property="lblMessage" destination="MyH-ZD-dWk" id="M29-86-uS3"/>
+                        <outlet property="popoverView" destination="drU-bV-crX" id="DFF-yx-eft"/>
+                        <segue destination="JWy-yy-pJ5" kind="unwind" identifier="toHome" unwindAction="unwindToHomeViewControllerWithSegue:" id="ziW-L8-1fG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yeg-j2-ic8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="drU-bV-crX">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qre-YI-ISD">
+                            <rect key="frame" x="16" y="78" width="80" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <connections>
+                                <segue destination="JWy-yy-pJ5" kind="unwind" unwindAction="unwindToHomeViewControllerWithSegue:" id="xu4-ja-gtd"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JnB-62-dDt">
+                            <rect key="frame" x="144" y="78" width="80" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <connections>
+                                <action selector="btnContinue:" destination="aBI-yD-r2R" eventType="touchUpInside" id="I8W-22-Wsh"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyH-ZD-dWk">
+                            <rect key="frame" x="16" y="20" width="208" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="494-il-5YX"/>
+                </view>
+                <exit id="JWy-yy-pJ5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-779.46026986506752" y="28"/>
         </scene>

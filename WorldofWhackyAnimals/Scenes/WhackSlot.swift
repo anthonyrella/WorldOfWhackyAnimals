@@ -71,9 +71,9 @@ class WhackSlot: SKNode {
         isHit = false
         charNode.name = "charEnemy"
         
-        //times how long to keep enemy shown asynchronously and hides it after the time runs out
-        DispatchQueue.main.asyncAfter(deadline: .now() + (hideTime * 3.5)) { [unowned self] in
-            self.hide()
+        //Times how long to keep enemy shown asynchronously and hides it after the time runs out
+        DispatchQueue.main.asyncAfter(deadline: .now() + (hideTime * 3.5)) { [weak self] in
+            self?.hide()
         }
     }
     

@@ -30,7 +30,6 @@
 		AE885EA321C2ECC800B4BF43 /* dragonfly-bonus.png in Resources */ = {isa = PBXBuildFile; fileRef = AE885E9C21C2ECC800B4BF43 /* dragonfly-bonus.png */; };
 		AE885EA421C2ECC800B4BF43 /* panda-asia.png in Resources */ = {isa = PBXBuildFile; fileRef = AE885E9D21C2ECC800B4BF43 /* panda-asia.png */; };
 		AE885EA621C2F20D00B4BF43 /* bear-northamerica.png in Resources */ = {isa = PBXBuildFile; fileRef = AE885EA521C2F20C00B4BF43 /* bear-northamerica.png */; };
-		AE99AD8921C34E7400C3598C /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE99AD8821C34E7400C3598C /* PopoverViewController.swift */; };
 		AEF5377D21C06C0F00E3C956 /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = AEF5377B21C06C0E00E3C956 /* whack.caf */; };
 		AEF5378C21C06C1A00E3C956 /* whackBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF5378021C06C1A00E3C956 /* whackBackground.png */; };
 		AEF5379321C06C1A00E3C956 /* whackHole.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF5378721C06C1A00E3C956 /* whackHole.png */; };
@@ -66,7 +65,6 @@
 		AE885E9C21C2ECC800B4BF43 /* dragonfly-bonus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragonfly-bonus.png"; sourceTree = "<group>"; };
 		AE885E9D21C2ECC800B4BF43 /* panda-asia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "panda-asia.png"; sourceTree = "<group>"; };
 		AE885EA521C2F20C00B4BF43 /* bear-northamerica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bear-northamerica.png"; sourceTree = "<group>"; };
-		AE99AD8821C34E7400C3598C /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		AEF5377B21C06C0E00E3C956 /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whack.caf; sourceTree = "<group>"; };
 		AEF5378021C06C1A00E3C956 /* whackBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whackBackground.png; sourceTree = "<group>"; };
 		AEF5378721C06C1A00E3C956 /* whackHole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whackHole.png; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 				92E7041721A1D27B003DEE1F /* DirectionsViewController.swift */,
 				92E7041521A1CDFA003DEE1F /* ChangePlayerViewController.swift */,
 				92E7041E21A1D985003DEE1F /* GameViewController.swift */,
-				AE99AD8821C34E7400C3598C /* PopoverViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -297,7 +294,6 @@
 				92E7040A21A1CD41003DEE1F /* ContinentSelectionViewController.swift in Sources */,
 				92E7040E21A1CD80003DEE1F /* PlayerStatsViewController.swift in Sources */,
 				92E703F721A0D4B1003DEE1F /* ViewController.swift in Sources */,
-				AE99AD8921C34E7400C3598C /* PopoverViewController.swift in Sources */,
 				92E7042221A1DC47003DEE1F /* GameScene.swift in Sources */,
 				92E703F521A0D4B1003DEE1F /* AppDelegate.swift in Sources */,
 				92E7041621A1CDFA003DEE1F /* ChangePlayerViewController.swift in Sources */,
