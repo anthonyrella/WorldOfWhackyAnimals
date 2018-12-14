@@ -12,8 +12,18 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
+    //this value is set on first load, and is updated only when user passes a level
+    var levelOfDifficulty: Int = 8
+    
+    //Dejoun your code should check if this value has been set first. If not then start game with value from levelOfDifficulty. This is the value that gets changed when a user selects a level
+    var currentDifficultySelection : Int? = nil
+    
+    //Button title for dynamic PopoverViewController
+    var btnTitle = ""
+    var lblMessage = ""
+    var lblScore = ""
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
