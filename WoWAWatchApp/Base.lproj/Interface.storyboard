@@ -18,7 +18,7 @@
                         <label alignment="left" text="User:" textAlignment="left" id="LYd-il-fcb">
                             <color key="textColor" name="selectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </label>
-                        <label alignment="left" text="Score : " id="z5S-sY-Aho">
+                        <label alignment="left" text="Level:" id="z5S-sY-Aho">
                             <color key="textColor" name="selectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </label>
                     </items>
